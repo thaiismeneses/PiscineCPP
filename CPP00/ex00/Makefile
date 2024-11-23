@@ -1,9 +1,9 @@
 NAME = megaphone
-CXX = c++
+CPP = c++
 RM = rm -rf
-CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
-SRC =	ex00.cpp
+SRC =	megaphone.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -17,7 +17,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "-----------------------Compilation of $(NAME)----------------------------------------"
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ) 
+	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
 	@echo "-------------------------------------------------------------------------------------"
 	@echo "$(blink)$(G) ✅ $(NAME) successfully compiled $(Reset)"
 

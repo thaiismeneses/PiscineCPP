@@ -3,7 +3,9 @@ CXX = c++
 RM = rm -rf
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
-SRC =	PhoneBook.cpp
+SRC =	PhoneBook.cpp\
+		Contact.cpp\
+		main.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -17,7 +19,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "-----------------------Compilation of $(NAME)----------------------------------------"
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ) 
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 	@echo "-------------------------------------------------------------------------------------"
 	@echo "$(blink)$(G) ✅ $(NAME) successfully compiled $(Reset)"
 

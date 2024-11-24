@@ -5,14 +5,22 @@
 
 class PhoneBook
 {
-    public:
-    private:
-        int size[8];
-        std::string FirstName;
-        std::string LastName;
-        std::string Nickname;
-        std::string PhoneNumber;
-        std::string DarkestSecret;
+	public:
+		void PrintMenu();
+		void AddContact();
+		PhoneBook();
+		~PhoneBook();
+	private:
+		int size[8];
+
+	PhoneBook()
+	{
+
+	}
+	~PhoneBook()
+	{
+		delete[] size;
+	}
 };
 
 #endif

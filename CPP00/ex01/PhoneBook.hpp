@@ -1,26 +1,25 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+
 # include <string>
+# include <iomanip>
+# include "Contact.hpp"
 
 
 class PhoneBook
 {
 	public:
+		PhoneBook();
 		void PrintMenu();
 		void AddContact();
-		PhoneBook();
-		~PhoneBook();
+		void SearchContact();
+
 	private:
-		int size[8];
+		Contact Contacts[8];
+		int CurrentIndex;
+		int TotalContacts;
 
-	PhoneBook()
-	{
 
-	}
-	~PhoneBook()
-	{
-		delete[] size;
-	}
 };
 
 #endif

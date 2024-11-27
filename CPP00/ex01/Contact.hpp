@@ -5,10 +5,9 @@
 
 class Contact {
 	public:
-		void setContact()
-		{
-			
-		};
+		void SetContact( const std::string FirstName, const std::string LastName,
+			const std::string Nickname, const std::string PhoneNumber, const std::string DarkestSecret);
+
 	private:
 		std::string FirstName;
         std::string LastName;

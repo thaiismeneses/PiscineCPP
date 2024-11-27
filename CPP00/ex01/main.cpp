@@ -22,14 +22,10 @@ int main()
 		std::getline(std::cin, InputCommand);
 		InputCommand = ttoUpperCase(InputCommand);
 		if (InputCommand == "ADD")
-		{
-			std::cout << "Adding a new contact" << std::endl;
-			//PhoneBook.AddContact();
-		}
+			PhoneBook.AddContact();
 		else if (InputCommand == "SEARCH")
 		{
-			std::cout << "Searching for a contact" << std::endl;
-			//PhoneBook.SearchContact();
+			PhoneBook.SearchContact();
 		}
 		else if (InputCommand == "EXIT")
 			break;

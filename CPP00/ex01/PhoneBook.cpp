@@ -11,7 +11,7 @@ PhoneBook::PhoneBook()
 
 void PhoneBook::PrintMenu()
 {
-	std::cout << "Welcome to the 80s and their unbelievable technology!" << std::endl;
+	std::cout<< std::endl << "Welcome to the 80s and their unbelievable technology!" << std::endl;
 	std::cout << std::endl;
 	std::cout << "------------ MENU ------------" << std::endl;
 	std::cout << std::endl;
@@ -27,7 +27,7 @@ void PhoneBook::AddContact()
 	Contact Contact;
 	std::string FirstName, LastName, Nickname, PhoneNumber, DarkestSecret;
 
-	std::cout << "Let's create a new contact" << std::endl;
+	std::cout << std::endl << "Let's create a new contact" << std::endl;
 
 	std::cout << "First Name: " << std::endl;
 	std::getline(std::cin, FirstName);
@@ -47,27 +47,27 @@ void PhoneBook::AddContact()
 	Contacts[CurrentIndex].SetContact(FirstName, LastName, Nickname, PhoneNumber, DarkestSecret);
 	CurrentIndex++;
 
+	CurrentIndex = (CurrentIndex) % 8;
 	if (TotalContacts < 8)
 		TotalContacts++;
-
 }
 
 void PhoneBook::SearchContact()
 {
-	std::cout << "Searching for a contact..." << std::endl;
+	std::cout << std::endl << "Searching for a contact..." << std::endl;
 
 	if (TotalContacts == 0)
 	{
-		std::cout << "No contacts to search for, sorry!" << std::endl;
+		std::cout<< std::endl << "No contacts to search for, sorry!" << std::endl;
 		return;
-
 	}
-
 	std::cout	<< std::setw(10) << "Index" << "|"
 				<< std::setw(10) << "First Name" << "|"
 				<< std::setw(10) << "Last Name" << "|"
-				<< std::setw(10) << "Nickname" << "|"
-				<< std::setw(10) << "Phone Number" << "|"
-				<< std::setw(10) << "Darkest Secret" << std::endl;
+				<< std::setw(10) << "Nickname" << "|"<< std::endl;
+	std::cout << std::string(44, '-') << std::endl;
+
+	for (int i = 0; i < TotalContacts; i++)
+		Contacts[i].PrintContact(i);
 
 }

@@ -1,7 +1,7 @@
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
-#include <iostream>
+
 
 PhoneBook::PhoneBook()
 {
@@ -54,13 +54,15 @@ void PhoneBook::AddContact()
 
 void PhoneBook::SearchContact()
 {
+	int SearchIndex;
 	std::cout << std::endl << "Searching for a contact..." << std::endl;
 
 	if (TotalContacts == 0)
 	{
-		std::cout<< std::endl << "No contacts to search for, sorry!" << std::endl;
+		std::cout << std::endl << "No contacts to search for, sorry!" << std::endl;
 		return;
 	}
+	std::cout << std::string(44, '-') << std::endl;
 	std::cout	<< std::setw(10) << "Index" << "|"
 				<< std::setw(10) << "First Name" << "|"
 				<< std::setw(10) << "Last Name" << "|"
@@ -70,4 +72,15 @@ void PhoneBook::SearchContact()
 	for (int i = 0; i < TotalContacts; i++)
 		Contacts[i].PrintContact(i);
 
+	std::cout << "Select an index for more details: " << std::endl;
+	
+	while (!(std::cin >> SearchIndex) || SearchIndex < 0 || SearchIndex >= TotalContacts)
+	{
+		std::cin.clear();
+		std::cin.ignore(2147483647, '\n');
+		std::cout << std::endl << "Contact Selected Not Found" << std::endl;
+		std::cout << "Please enter a valid index!" << std::endl;
+	}
+	std::cin.ignore(2147483647, '\n');
+	Contacts[SearchIndex].PrintDetails(SearchIndex);
 }

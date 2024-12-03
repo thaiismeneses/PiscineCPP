@@ -10,6 +10,7 @@ class Contact {
 		void SetContact( const std::string FirstName, const std::string LastName,
 			const std::string Nickname, const std::string PhoneNumber, const std::string DarkestSecret);
 		void PrintContact(int index)const;
+		void PrintDetails(int index) const;
 
 	private:
 		std::string FirstName;

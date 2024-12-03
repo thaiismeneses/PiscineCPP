@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-std::string	ttoUpperCase(std::string &str)
+std::string	ToUpperCase(std::string &str)
 {
 	std::string tmp = str;
 	for (size_t i = 0; i < str.length(); i++)
@@ -20,7 +20,7 @@ int main()
 	{
 		PhoneBook.PrintMenu();
 		std::getline(std::cin, InputCommand);
-		InputCommand = ttoUpperCase(InputCommand);
+		InputCommand = ToUpperCase(InputCommand);
 		if (InputCommand == "ADD")
 			PhoneBook.AddContact();
 		else if (InputCommand == "SEARCH")

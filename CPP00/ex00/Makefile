@@ -1,5 +1,5 @@
 NAME = megaphone
-CPP = c++
+CPP = g++
 RM = rm -rf
 CPPFLAGS = -Wall -Wextra -Werror -g -std=c++98
 

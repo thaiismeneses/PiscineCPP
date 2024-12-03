@@ -1,5 +1,5 @@
 NAME = PhoneBook
-CXX = c++
+CXX = g++
 RM = rm -rf
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 

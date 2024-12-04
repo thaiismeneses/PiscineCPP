@@ -1,5 +1,5 @@
 NAME = PhoneBook
-CXX = g++
+CPP = c++
 RM = rm -rf
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
@@ -19,12 +19,12 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "-----------------------Compilation of $(NAME)----------------------------------------"
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CXXFLAGS) -o $(NAME) $(OBJ)
 	@echo "-------------------------------------------------------------------------------------"
 	@echo "$(blink)$(G) ✅ $(NAME) successfully compiled $(Reset)"
 
 val: re
-	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes  -s ./megaphone
+	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes  -s ./PhoneBook
 
 clean:
 	$(RM) $(OBJ)

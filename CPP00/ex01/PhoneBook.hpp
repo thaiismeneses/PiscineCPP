@@ -20,8 +20,6 @@ class PhoneBook
 		Contact Contacts[8];
 		int CurrentIndex;
 		int TotalContacts;
-
-
 };
 
 #endif

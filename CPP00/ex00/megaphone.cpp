@@ -1,14 +1,18 @@
 #include <iostream>
+#include <cctype>
 
-void noise(char *argv)
+void noise(std::string str)
 {
-    for (int i = 0; argv[i]; i++)
-        std::cout << (char)toupper(argv[i]);
+    for (size_t i = 0; i < str.size(); i++)
+        std::cout << (char)std::toupper(str[i]);
 }
 
 
 int main(int argc, char **argv)
 {
+
+    std::string str;
+
     if (argc < 2)
     {
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
@@ -17,7 +21,10 @@ int main(int argc, char **argv)
     else
     {
         for (int i = 1; argv[i]; i++)
-            noise(argv[i]);
+        {
+            str = argv[i];
+            noise(str);
+        }
         std::cout << std::endl;
     }
 }

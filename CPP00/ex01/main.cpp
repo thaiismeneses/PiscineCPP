@@ -18,8 +18,14 @@ int main()
 
 	while (1)
 	{
+
 		PhoneBook.PrintMenu();
 		std::getline(std::cin, InputCommand);
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			std::exit(0);
+		}
 		InputCommand = ToUpperCase(InputCommand);
 		if (InputCommand == "ADD")
 			PhoneBook.AddContact();

@@ -15,7 +15,7 @@ std::string ResizeString(std::string str)
 {
 	if (str.length() > 10)
 	{
-		str.resize(9);
+		str = str.substr(0,9);
 		str += ".";
 	}
 	return (str);

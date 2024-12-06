@@ -28,21 +28,59 @@ void PhoneBook::AddContact()
 	std::string FirstName, LastName, Nickname, PhoneNumber, DarkestSecret;
 
 	std::cout << std::endl << "Let's create a new contact" << std::endl;
+	do {
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			std::exit(0);
+		}
+		std::cout << "First Name: " << std::endl;
+		std::getline(std::cin, FirstName);
+	} while (FirstName.size() == 0);
 
-	std::cout << "First Name: " << std::endl;
-	std::getline(std::cin, FirstName);
+	do 
+	{
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			std::exit(0);
+		}
+		std::cout << "LastName:" << std::endl;
+		std::getline(std::cin, LastName);
+	} while (LastName.size() == 0);
 
-	std::cout << "LastName:" << std::endl;
-	std::getline(std::cin, LastName);
+	do
+	{
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			std::exit(0);
+		}
+		std::cout << "Nickname:" << std::endl;
+		std::getline(std::cin, Nickname);
+	} while (Nickname.size() == 0);
 
-	std::cout << "Nickname:" << std::endl;
-	std::getline(std::cin, Nickname);
+	do
+	{
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			std::exit(0);
+		}	
+		std::cout << "Phone Number:" << std::endl;
+		std::getline(std::cin, PhoneNumber);
+	} while (PhoneNumber.size() == 0);
 
-	std::cout << "Phone Number:" << std::endl;
-	std::getline(std::cin, PhoneNumber);
-
-	std::cout << "Darkest Secret" << std::endl;
-	std::getline(std::cin, DarkestSecret);
+	do
+	{
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			std::exit(0);
+		}	
+		std::cout << "Darkest Secret" << std::endl;
+		std::getline(std::cin, DarkestSecret);
+	} while (DarkestSecret.size() == 0);
 
 	Contacts[CurrentIndex].SetContact(FirstName, LastName, Nickname, PhoneNumber, DarkestSecret);
 	CurrentIndex++;

@@ -1,3 +1,15 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thfranco <thfranco@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/28 20:05:42 by thfranco          #+#    #+#             */
+/*   Updated: 2024/12/28 20:05:43 by thfranco         ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 #include "Contact.hpp"
 
 void Contact::SetContact(const std::string FirstName, const std::string LastName,

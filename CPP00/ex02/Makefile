@@ -24,7 +24,7 @@ $(NAME): $(OBJ)
 	@echo "$(blink)$(G) ✅ $(NAME) successfully compiled $(Reset)"
 
 val: re
-	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes  -s ./PhoneBook
+	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes  -s ./Account
 
 get_log:
 	wget https://cdn.intra.42.fr/document/document/28439/19920104_091532.log

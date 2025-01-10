@@ -4,8 +4,7 @@ RM = rm -rf
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC =	Zombie.cpp\
-		newZombie.cpp\
-		randomChump.cpp\
+		zombieHorde.cpp\
 		main.cpp\
 
 OBJ = $(SRC:.cpp=.o)
